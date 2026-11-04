@@ -6,8 +6,8 @@ export default function NotFound() {
     <Container className="py-32">
       <h1 className="font-semibold text-4xl tracking-tight">Page not found</h1>
       <p className="mt-4 max-w-[48ch] text-muted">
-        This page does not exist or has moved. The case studies and résumé are
-        on the home page.
+        This page does not exist or has moved. The case studies and CV are on
+        the home page.
       </p>
       <Link
         href="/"
