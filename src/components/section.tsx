@@ -15,7 +15,7 @@ export function Section({ id, title, intro, children }: SectionProps) {
     <section
       id={id}
       aria-labelledby={headingId}
-      className="scroll-mt-20 py-16 sm:py-24"
+      className="scroll-mt-20 py-12 sm:py-20"
     >
       <Container className="grid gap-10 lg:grid-cols-[240px_1fr] lg:gap-16">
         <div>

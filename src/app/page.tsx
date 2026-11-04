@@ -96,15 +96,27 @@ export default function HomePage() {
           ))}
         </ul>
 
-        <h3 className="mt-16 font-semibold text-lg">Open-source projects</h3>
+        <h3 className="mt-12 font-semibold text-lg">Open-source projects</h3>
         <ul className="mt-6 grid gap-8 sm:grid-cols-2">
           {projects.map((project) => (
             <li key={project.name} className="border-line border-t pt-5">
               <h4 className="font-semibold">{project.name}</h4>
-              <p className="mt-2 text-muted text-sm">{project.description}</p>
-              <p className="mt-3 text-muted text-xs">
-                {project.stack.join(", ")}
+              <p className="mt-2 text-[0.9375rem] text-muted leading-relaxed">
+                {project.description}
               </p>
+              <ul
+                aria-label={`${project.name} stack`}
+                className="mt-4 flex flex-wrap gap-1.5"
+              >
+                {project.stack.map((tech) => (
+                  <li
+                    key={tech}
+                    className="rounded-md border border-line px-2 py-0.5 font-mono text-[0.75rem] text-muted"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
               <p className="mt-4 flex gap-4 text-sm">
                 <a
                   href={project.repo}
