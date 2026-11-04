@@ -6,14 +6,15 @@
  * preference. The inline script in layout.tsx sets data-theme before paint.
  */
 :root {
-  --paper: #f4f6f7;
-  --surface: #ffffff;
+  /* Warm stone instead of cool white: softer on the eyes, still AA everywhere. */
+  --paper: #eeece6;
+  --surface: #f8f7f3;
   --ink: #15212b;
-  --muted: #56646f;
-  --line: #d3dce1;
+  --muted: #535d64;
+  --line: #d8d4ca;
   --accent: #0f6e66;
   --accent-ink: #ffffff;
-  --signal: #a86a12;
+  --signal: #8c5a12;
   color-scheme: light;
 }
 
