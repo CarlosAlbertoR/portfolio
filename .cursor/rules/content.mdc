@@ -1,0 +1,12 @@
+---
+description: Rules for editing portfolio content
+globs: src/content/**/*.ts
+alwaysApply: false
+---
+
+- Facts must match Carlos's Master CV: employers, titles, dates, metrics and
+  technologies. Do not add or embellish.
+- Missing detail: leave `// TODO(carlos): ...` instead of guessing.
+- Keep `satisfies <Type>` on every export so TypeScript validates the shape.
+- After edits run `pnpm test` (content integrity tests).
+- For new case studies follow the `add-case-study` skill.

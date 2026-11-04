@@ -1,0 +1,16 @@
+---
+description: Design and accessibility rules for UI components
+globs: src/components/**/*.tsx, src/app/**/*.tsx, src/app/globals.css
+alwaysApply: false
+---
+
+- Use the design tokens from `src/app/globals.css` (`paper`, `surface`, `ink`,
+  `muted`, `line`, `accent`, `signal`). No raw hex values in components.
+- Verify light and dark themes, and mobile (390px) as well as desktop.
+- Semantic HTML first: landmarks, one `h1` per page, ordered headings, real
+  `<button>` and `<a>` elements, visible focus.
+- Respect `prefers-reduced-motion`. Motion only answers a user action or marks
+  one deliberate moment.
+- Prefer `<ViewTransition>` from React for route animations; see the
+  `vercel-react-view-transitions` skill.
+- Keep the axe e2e test (`e2e/site.spec.ts`) green.

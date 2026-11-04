@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      next-react:
+        patterns: ["next", "react", "react-dom", "@types/react*", "babel-plugin-react-compiler"]
+      tooling:
+        patterns: ["@biomejs/*", "vitest", "@vitest/*", "@playwright/*", "@testing-library/*", "typescript"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

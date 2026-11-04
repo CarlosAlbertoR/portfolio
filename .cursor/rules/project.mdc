@@ -1,0 +1,16 @@
+---
+description: Project architecture, commands and rules for Carlos's portfolio
+alwaysApply: true
+---
+
+Read `AGENTS.md` at the repository root before making changes; it is the
+single source of truth for stack, commands, architecture and content rules.
+
+Key reminders:
+
+- Next.js 16 here differs from training data. Check `node_modules/next/dist/docs/`
+  before using an API.
+- Server Components by default; `"use client"` only for interaction.
+- Copy lives in `src/content/*.ts`. Never invent facts about Carlos; use
+  `// TODO(carlos): ...` when information is missing.
+- Run `pnpm check` before finishing.
