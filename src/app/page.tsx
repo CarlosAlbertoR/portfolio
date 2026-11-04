@@ -44,9 +44,13 @@ export default function HomePage() {
             </Link>
             <a
               href={profile.links.cv}
-              className="rounded-full border border-line px-5 py-2.5 font-medium transition-colors hover:border-ink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-baseline gap-2 rounded-full border border-line px-5 py-2.5 font-medium transition-colors hover:border-ink"
             >
-              Download résumé
+              View résumé
+              <span className="font-mono text-muted text-xs">PDF</span>
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           </div>
         </div>

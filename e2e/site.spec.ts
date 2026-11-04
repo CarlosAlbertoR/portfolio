@@ -23,6 +23,11 @@ test("home links to the case study and the résumé", async ({ page }) => {
   await expect(page).toHaveURL(/\/work\/inchcape-multi-brand-platform$/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("brands");
 
+  await page.goto("/");
+  const resume = page.getByRole("link", { name: /View résumé/ });
+  await expect(resume).toHaveAttribute("target", "_blank");
+  await expect(resume).toHaveAttribute("rel", /noopener/);
+
   const cv = await page.request.get("/carlos-rios-cv.pdf");
   expect(cv.ok()).toBe(true);
   expect(cv.headers()["content-type"]).toContain("pdf");
