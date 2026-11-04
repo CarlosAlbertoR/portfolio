@@ -10,7 +10,7 @@ import { profile } from "@/content/profile";
 import { projects } from "@/content/projects";
 import { skills } from "@/content/skills";
 import { personJsonLd, serializeJsonLd } from "@/lib/json-ld";
-import { formatPeriod } from "@/lib/site";
+import { formatList, formatPeriod } from "@/lib/site";
 
 export default function HomePage() {
   const caseStudies = getCaseStudies();
@@ -27,10 +27,10 @@ export default function HomePage() {
       <Container className="grid items-center gap-12 pt-14 pb-16 sm:pt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pt-24">
         <div>
           <p className="text-muted">
-            {profile.role} · {profile.location}
+            Open to remote roles · {profile.location}
           </p>
-          <h1 className="mt-5 max-w-[16ch] text-balance font-semibold text-[2.6rem] leading-[1.05] tracking-[-0.03em] sm:text-6xl">
-            I design frontends that many teams can ship at once.
+          <h1 className="mt-5 max-w-[17ch] text-balance font-semibold text-[2.6rem] leading-[1.05] tracking-[-0.03em] sm:text-6xl">
+            I design, build and modernize enterprise web platforms.
           </h1>
           <p className="mt-6 max-w-[52ch] text-lg text-muted">
             {profile.statement}
@@ -84,8 +84,8 @@ export default function HomePage() {
                     {study.outcome}
                   </p>
                 </div>
-                <span className="text-accent text-sm font-medium">
-                  Read case study
+                <span className="font-medium text-accent text-sm">
+                  Read the case study
                 </span>
               </Link>
             </li>
@@ -125,7 +125,7 @@ export default function HomePage() {
       <Section
         id="experience"
         title="Experience"
-        intro="Six roles across enterprise, consulting and an early-stage startup."
+        intro="Six roles, from freelance products to enterprise platforms."
       >
         <ol className="relative border-line border-l">
           {experience.map((job) => (
@@ -179,7 +179,8 @@ export default function HomePage() {
               <p key={paragraph.slice(0, 24)}>{paragraph}</p>
             ))}
             <p className="pt-4">
-              Open to remote roles in frontend architecture. Write to{" "}
+              I am open to remote roles as a {formatList(profile.openTo)},{" "}
+              {formatList(profile.engagement)}. Write to{" "}
               <a
                 href={`mailto:${profile.email}`}
                 className="font-medium text-accent underline underline-offset-4"

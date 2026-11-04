@@ -14,7 +14,7 @@ export const siteUrl = new URL(
 export const siteTitle = `${profile.name} — ${profile.role}`;
 
 export const siteDescription =
-  "Frontend Architect specialized in Angular, React and Next.js: microfrontend architecture, framework migrations and web performance.";
+  "Frontend Architect and full stack engineer working with Angular, React, Next.js and NestJS: microfrontend architecture, framework migrations and web performance.";
 
 export function formatMonth(isoMonth: string): string {
   const [year, month] = isoMonth.split("-").map(Number);
@@ -27,4 +27,9 @@ export function formatMonth(isoMonth: string): string {
 
 export function formatPeriod(start: string, end: string | null): string {
   return `${formatMonth(start)} – ${end ? formatMonth(end) : "Present"}`;
+}
+
+/** "a, b or c" in plain English. */
+export function formatList(items: string[]): string {
+  return new Intl.ListFormat("en", { type: "disjunction" }).format(items);
 }

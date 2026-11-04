@@ -9,7 +9,7 @@ export const inchcape = {
   slug: "inchcape-multi-brand-platform",
   title: "One frontend platform for many brands, sites and languages",
   outcome:
-    "A Next.js microfrontend architecture on a headless CMS, with shared sessions across brand subdomains and builds 25% faster.",
+    "A Next.js microfrontend architecture on a headless CMS, with one session shared across brand subdomains and build times cut by 25%.",
   company: "Inchcape Digital",
   role: "Frontend Architect",
   period: "Jun 2024 – Feb 2025",
@@ -32,7 +32,7 @@ export const inchcape = {
     {
       heading: "The problem",
       body: [
-        "Inchcape runs digital experiences for several automotive brands, each with its own sites and languages. The frontend had to let brand teams ship independently while keeping one platform, one design language and one way of signing in.",
+        "Inchcape operates digital channels for several automotive brands, each with its own sites and languages. The goal was one frontend platform that could serve all of them, with shared UI components and a single sign-in across brand sites.",
         // TODO(carlos): add the concrete starting point (how many brands/sites, what existed before).
       ],
     },
@@ -40,13 +40,13 @@ export const inchcape = {
       heading: "Architecture",
       body: [
         "I designed a multi-brand, multi-site, multi-language architecture with Next.js as the application layer, Module Federation to share code at runtime and single-spa to compose independently deployed microfrontends.",
-        "Content lives in Umbraco used as a headless CMS, so editors manage each brand's pages without frontend releases, and the frontend stays a pure consumer of structured content.",
+        "Content lives in Umbraco, used as a headless CMS, so page content is managed outside the frontend codebase and delivered to it as structured data.",
       ],
     },
     {
       heading: "Shared sessions across subdomains",
       body: [
-        "Each brand lives on its own subdomain, but users should not sign in again when they move between them. I defined secure cookie sharing across subdomains so authentication and session state stay consistent between brand sites.",
+        "Each brand lives on its own subdomain. I defined secure cookie sharing across subdomains so users keep one authenticated session as they move between brand sites.",
       ],
     },
     {

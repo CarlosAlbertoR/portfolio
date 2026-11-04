@@ -19,6 +19,10 @@ export type Profile = {
   statement: string;
   /** Short paragraph for the about section. */
   about: string[];
+  /** Roles Carlos is open to, shown in the hero and contact section. */
+  openTo: string[];
+  /** Engagement types, e.g. "full-time". */
+  engagement: string[];
   email: string;
   links: {
     linkedin: string;

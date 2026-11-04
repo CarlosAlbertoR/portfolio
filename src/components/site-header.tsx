@@ -6,7 +6,7 @@ import { ThemeToggle } from "./theme-toggle";
 const nav = [
   { href: "/#work", label: "Work" },
   { href: "/#experience", label: "Experience" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#contact", label: "About" },
 ] as const;
 
 export function SiteHeader() {

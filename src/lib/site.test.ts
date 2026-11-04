@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { serializeJsonLd } from "./json-ld";
-import { formatMonth, formatPeriod } from "./site";
+import { formatList, formatMonth, formatPeriod } from "./site";
 
 describe("formatMonth", () => {
   it("formats an ISO month without timezone drift", () => {
@@ -18,5 +18,12 @@ describe("formatPeriod", () => {
 describe("serializeJsonLd", () => {
   it("escapes < so the script tag cannot be closed early", () => {
     expect(serializeJsonLd({ x: "</script>" })).not.toContain("</script>");
+  });
+});
+
+describe("formatList", () => {
+  it("joins with commas and a final or", () => {
+    expect(formatList(["A", "B", "C"])).toBe("A, B, or C");
+    expect(formatList(["full-time", "contract"])).toBe("full-time or contract");
   });
 });

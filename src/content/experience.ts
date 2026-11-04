@@ -8,7 +8,7 @@ export const experience = [
     start: "2025-11",
     end: null,
     summary:
-      "Upgrading 24 internal Angular repositories across major versions (18 → 20, now moving to 22), adopting standalone components, Signals and Native Federation.",
+      "Upgraded 24 internal Angular repositories across major versions (18 → 20, now moving to 22), migrating projects to standalone components and Signals, and shipping features in a Native Federation microfrontend architecture.",
     stack: ["Angular", "Signals", "Native Federation", "TypeScript"],
   },
   {
@@ -61,6 +61,14 @@ export const experience = [
     end: "2021-05",
     summary:
       "Delivered web and mobile products for clients, from architecture to deployment.",
-    stack: ["React", "React Native", "Node.js", "NestJS", "PostgreSQL"],
+    stack: [
+      "React",
+      "Angular",
+      "React Native",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "MySQL",
+    ],
   },
 ] satisfies Experience[];

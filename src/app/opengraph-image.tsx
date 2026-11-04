@@ -21,7 +21,7 @@ export default function OpenGraphImage() {
       }}
     >
       <div style={{ fontSize: 30, color: "#97a6b0" }}>
-        {`${profile.role} · Angular · React · Next.js`}
+        {`${profile.role} · Full stack · Remote`}
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         <div
@@ -35,7 +35,7 @@ export default function OpenGraphImage() {
           {profile.name}
         </div>
         <div style={{ fontSize: 34, color: "#5cbcb1" }}>
-          Frontends that many teams can ship at once.
+          Enterprise web platforms in Angular, React and Next.js
         </div>
       </div>
     </div>,
